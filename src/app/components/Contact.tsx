@@ -61,10 +61,7 @@ const Contact = () => {
         body: JSON.stringify(user),
         headers: { "Content-Type": "application/json" },
       });
-
       const data = await res.json();
-      console.log(data);
-
       if (data.success) {
         setLoaing(false);
         setSubmitStatus({
@@ -102,7 +99,7 @@ const Contact = () => {
         <div className="absoulute top-1/4 w-96 rounded-full bg-primary/5 right-0 "></div>
         <div className="absoulute bottom-1/4 w-96 rounded-full bg-highlight/5 right-0 "></div>
       </div>
-      <div className="container p-6 mx-auto relative">
+      <div className="container py-6 px-4 sm:px-6 mx-auto relative">
         {/* Title */}
         <div className=" mb-12 mx-auto">
           <span className="inline-block px-4 py-1 bg-orange-500/20  text-orange-600  text-sm font-medium rounded-full mb-3">

@@ -6,7 +6,9 @@ import { ArrowRight, Download, Icon, MoveRight } from "lucide-react";
 import "@/styles/section/Hero.css";
 import Link from "next/link";
 import { AnimatedBorderButton } from "../AnimatedBorderButton";
+import { useRouter } from "next/navigation";
 const Hero = () => {
+  const router = useRouter();
   return (
     <section id="" className="relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none ">
@@ -65,7 +67,15 @@ const Hero = () => {
                 passion for code{" "}
               </p>
               <div className="flex flex-wrap gap-4 animate-fade-in animaation-delay-300 ">
-                <Button className="group  md:h-12 h-10" size="default">
+                <Button
+                  className="group  md:h-12 h-10"
+                  size="default"
+                  onClick={() =>
+                    document
+                      .getElementById("project")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
                   Explore my work
                   <span className="shake-on-hover">
                     <ArrowRight size={20} />
