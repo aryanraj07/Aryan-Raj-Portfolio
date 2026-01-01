@@ -8,8 +8,9 @@ import {
   FaArrowUp,
 } from "react-icons/fa";
 import Link from "next/link";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { Mail, MapPin, Phone, PhoneCall, Send } from "lucide-react";
 import Button from "./Button";
+import { socialLinks } from "@/constants";
 interface SubmitStatusType {
   type: string | null;
   message: string;
@@ -66,7 +67,7 @@ const Contact = () => {
         setLoaing(false);
         setSubmitStatus({
           type: "success",
-          message: "Message Sent",
+          message: "Message Sent ! Please check your email for confirmation.",
         });
         setUser({ name: "", email: "", message: "" });
       } else {
