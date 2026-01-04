@@ -33,84 +33,56 @@ export async function POST(req: Request) {
         to: email,
         subject: "Thanks for contacting me!",
         html: `
-<div class="mx-auto max-w-4xl bg-black text-white px-6 py-10 font-sans">
+<div style="max-width:600px;margin:40px auto;background:#ffffff;padding:24px 20px;border-radius:10px;font-family:Arial,Helvetica,sans-serif;color:#111;">
   
-  <!-- Header -->
-  <div class="space-y-6 text-center">
-    <div class="mx-auto h-1 w-20 bg-primary rounded"></div>
+  <!-- Top bar -->
+  <div style="width:60px;height:4px;background:#f97316;border-radius:4px;margin:0 auto 20px;"></div>
 
-    <div class="text-3xl md:text-4xl font-bold leading-tight">
-      <h2>Thank you for connecting.</h2>
-      <h2 class="mt-2">Looking forward to our next step</h2>
-    </div>
+  <!-- Heading -->
+  <h2 style="text-align:center;font-size:22px;margin:0;">
+    Thank you for connecting.
+  </h2>
+  <h3 style="text-align:center;font-size:20px;margin:6px 0 20px;font-weight:600;">
+    Looking forward to our next step
+  </h3>
 
-    <p class="text-gray-300 max-w-2xl mx-auto">
-      I appreciate you reaching out and sharing your thoughts.
-      I’ve received your message and I’m excited about the possibility
-      of collaborating. I’m available to discuss next steps.
-    </p>
+  <!-- Message -->
+  <p style="font-size:14px;line-height:1.6;color:#333;text-align:center;margin-bottom:24px;">
+    I appreciate you reaching out and sharing your thoughts.
+    I’ve received your message and I’m excited about the possibility
+    of collaborating. I’m available to discuss next steps.
+  </p>
 
-    <!-- CTA -->
-    <div class="flex justify-center">
-      <a href="tel:+917004659504" class="inline-block">
-        <button class="px-6 py-3 text-sm font-medium rounded-full bg-primary text-black">
-          Schedule a call
-        </button>
-      </a>
-    </div>
+  <!-- CTA -->
+  <div style="text-align:center;margin:30px 0;">
+    <a href="tel:+917004659504"
+       style="display:inline-block;padding:12px 22px;background:#f97316;color:#000;text-decoration:none;border-radius:999px;font-size:14px;font-weight:600;">
+      Schedule a Call
+    </a>
   </div>
 
   <!-- Divider -->
-  <div class="my-10 h-px w-full bg-primary/40"></div>
+  <hr style="border:none;border-top:1px solid #e5e7eb;margin:30px 0;" />
 
   <!-- Footer -->
-  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-    
-    <!-- Left -->
-    <div class="space-y-2">
-      <h3 class="text-lg font-semibold">Aryan Raj</h3>
-      <p class="text-sm text-gray-400">Full Stack Web Developer</p>
+  <div style="font-size:13px;color:#555;line-height:1.6;">
+    <strong>Aryan Raj</strong><br/>
+    Full Stack Web Developer<br/><br/>
 
-      <div class="flex items-center gap-2 text-sm">
-        <span>📞</span>
-        <span>+91 70046 59504</span>
-      </div>
+    📞 +91 70046 59504<br/>
+    📍 Noida, UP, 201301
+  </div>
 
-      <div class="flex items-center gap-2 text-sm">
-        <span>📍</span>
-        <span>Noida, UP, 201301</span>
-      </div>
-    </div>
-
-    <!-- Right (Socials) -->
-    <div class="flex items-center gap-4">
-      ${[
-        {
-          icon: Github,
-          href: "https://github.com/aryanraj07",
-          label: "GitHub",
-        },
-        {
-          icon: Linkedin,
-          href: "www.linkedin.com/in/aryanraj07",
-          label: "LinkedIn",
-        },
-        { icon: Twitter, href: "https://x.com/aryan314587", label: "Twitter" },
-      ]
-        .map(
-          (s) => `
-        <a href="${s.href}" aria-label="${s.label}"
-           class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-primary/30">
-          <span>${s.label}</span>
-        </a>`
-        )
-        .join("")}
-    </div>
+  <!-- Social links -->
+  <div style="margin-top:20px;">
+    <a href="https://github.com/aryanraj07" style="margin-right:12px;color:#f97316;text-decoration:none;">GitHub</a>
+    <a href="https://www.linkedin.com/in/aryanraj07" style="margin-right:12px;color:#f97316;text-decoration:none;">LinkedIn</a>
+    <a href="https://x.com/aryan314587" style="color:#f97316;text-decoration:none;">Twitter</a>
   </div>
 </div>
 `,
       });
-    await Promise.all([sendAdminManil(), sendUserConfirmationMail]);
+    await Promise.all([sendAdminManil(), sendUserConfirmationMail()]);
     return Response.json(
       { success: true, message: "Email sent successfully" },
       { status: 200 }
