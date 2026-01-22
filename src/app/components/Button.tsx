@@ -1,11 +1,15 @@
 import React from "react";
 type ButtonSize = "default" | "sm" | "lg";
+type ButtonVariant = "primary" | "danger" | "outline";
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: ButtonSize;
+  variant?: ButtonVariant;
 }
+
 const Button = ({
   className = "",
   size = "default",
+  variant = "primary",
   children,
   ...props
 }: ButtonProps) => {
@@ -16,7 +20,13 @@ const Button = ({
     default: "px-6 py-3 text-base",
     lg: "px-8 py-4 text-lg",
   };
-  const classes = `${baseClass} ${sizeClasses[size]} ${className} shadow-orange-glow`;
+  const variantClasses = {
+    primary: "bg-primary text-white hover:bg-primary/90 shadow-orange-glow",
+    danger: "bg-red-500 text-white hover:bg-red-600",
+    outline:
+      "border border-gray-400 text-white hover:bg-white/10 bg-transparent",
+  };
+  const classes = `${baseClass} ${sizeClasses[size]} ${className} ${variantClasses[variant]} `;
   return (
     <button className={classes} {...props}>
       <span className="flex items-center justify-center gap-2">{children}</span>

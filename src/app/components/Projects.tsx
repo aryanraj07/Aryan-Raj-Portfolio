@@ -4,6 +4,7 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { ArrowRight, ArrowUpRight, Github } from "lucide-react";
 import Link from "next/link";
+import { useConfirmRedirect } from "@/utils/handleConfirmCall";
 
 const projects = [
   {
@@ -17,6 +18,18 @@ const projects = [
     github: "https://github.com/aryanraj07/Yt-Video-Sync-Watcher",
     // tech: ["/icons/react.png", "/icons/next.png", "/icons/node.png"],
   },
+  {
+    id: 2,
+    title: "Whitehat Realty",
+    description:
+      "Explore detailed insights, market trends, and unbiased evaluations of commercial properties. ",
+    img: "/projects/Whitehat-project.png",
+    tags: ["Nest Js", "Bootstrap"],
+    live: "https://whitehat.realty",
+    // github: "https://github.com/aryanraj07/Yt-Video-Sync-Watcher",
+    // tech: ["/icons/react.png", "/icons/next.png", "/icons/node.png"],
+  },
+
   // {
   //   id: 2,
   //   title: "Ecommerece Platform",
@@ -30,6 +43,7 @@ const projects = [
 ];
 
 const Projects = () => {
+  const useConfirm = useConfirmRedirect();
   return (
     <section id="project" className="py-20 relative overflow-hidden ">
       <div className="absoulute top-1/4 w-96 rounded-full bg-primary/5 right-0 "></div>
@@ -64,18 +78,25 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-bg-gradient-to-t from-card via-card/50 to-transparent opacity-60 " />
                 <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity dura300">
-                  <Link
-                    href={item.live}
+                  <button
+                    onClick={() =>
+                      useConfirm({
+                        value: item.live,
+                        message: "View this project",
+                      })
+                    }
                     className="p-3 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
                   >
                     <ArrowUpRight className="w-5 h-5" />
-                  </Link>
-                  <Link
-                    href={item.github}
-                    className="p-3 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
-                  >
-                    <Github className="w-5 h-5" />
-                  </Link>
+                  </button>
+                  {item.github && (
+                    <Link
+                      href={item.github}
+                      className="p-3 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
+                    >
+                      <Github className="w-5 h-5" />
+                    </Link>
+                  )}
                 </div>
               </div>
               <div className="p-6 space-y-4 ">

@@ -7,7 +7,11 @@ import "@/styles/section/Hero.css";
 import Link from "next/link";
 import { AnimatedBorderButton } from "../AnimatedBorderButton";
 import { useRouter } from "next/navigation";
+import { useConfirmRedirect } from "@/utils/handleConfirmCall";
+
 const Hero = () => {
+  const confirmRedirect = useConfirmRedirect();
+
   const router = useRouter();
   return (
     <section id="" className="relative overflow-hidden">
@@ -111,14 +115,13 @@ const Hero = () => {
                 <div className="flex items-center gap-4 animate-fade-in animation-delay-400 ">
                   {/* <span>Follow me:</span> */}
                   {socialLinks.map((item, idx) => (
-                    <Link
-                      href={item.href}
-                      target="_blank"
+                    <button
+                      onClick={() => confirmRedirect({ value: item.href })}
                       key={idx}
                       className=" p-2 rounded-4 hover:bg-primary/10 glass rounded-full hover:text-primary transition-all duration-300"
                     >
                       {<item.icon className="w-4 h-4" />}
-                    </Link>
+                    </button>
                   ))}
                 </div>
               </div>
