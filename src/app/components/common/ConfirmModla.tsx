@@ -21,13 +21,13 @@ const ConfirmModal = ({ message, onConfirm, onCancel }: ConfirmModalProps) => {
   }, []);
   return (
     <div className="fixed inset-0 z-[9999] bg-black/60 flex items-center justify-center p-4">
-      <div className="mb-4 bg-surface z-50 shadow-lg max-w-sm w-[80%] rounded-lg p-4 h-30">
-        <div className="">{message}</div>
-        <div className="flex justify-end gap-4">
+      <div className=" bg-surface z-50 shadow-lg max-w-sm w-full rounded-lg p-4 ">
+        <div className="leading-relaxed text-sm sm:text-base">{message}</div>
+        <div className="mt-5 flex justify-end gap-4">
           <Button variant="danger" onClick={onCancel}>
             Cancel
           </Button>
-          <Button size="sm" onClick={onConfirm}>
+          <Button variant="success" size="sm" onClick={onConfirm}>
             Confirm
           </Button>
         </div>

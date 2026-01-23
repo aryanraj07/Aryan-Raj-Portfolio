@@ -24,7 +24,7 @@ const projects = [
     description:
       "Explore detailed insights, market trends, and unbiased evaluations of commercial properties. ",
     img: "/projects/Whitehat-project.png",
-    tags: ["Nest Js", "Bootstrap"],
+    tags: ["Next Js", "Bootstrap"],
     live: "https://whitehat.realty",
     // github: "https://github.com/aryanraj07/Yt-Video-Sync-Watcher",
     // tech: ["/icons/react.png", "/icons/next.png", "/icons/node.png"],
@@ -90,12 +90,17 @@ const Projects = () => {
                     <ArrowUpRight className="w-5 h-5" />
                   </button>
                   {item.github && (
-                    <Link
-                      href={item.github}
+                    <button
+                      onClick={() =>
+                        useConfirm({
+                          value: item.live,
+                          message: "View the source code on github?",
+                        })
+                      }
                       className="p-3 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
                     >
                       <Github className="w-5 h-5" />
-                    </Link>
+                    </button>
                   )}
                 </div>
               </div>
