@@ -29,6 +29,22 @@ const projects = [
     // github: "https://github.com/aryanraj07/Yt-Video-Sync-Watcher",
     // tech: ["/icons/react.png", "/icons/next.png", "/icons/node.png"],
   },
+  {
+    id: 3,
+    title: "Full Stack Ecommerce App",
+    description:
+      "A full-stack eCommerce platform using Next.js + Node.js + TypeScript",
+    img: "/projects/ecoomerece-banner.png",
+    tags: ["Next Js 16", "Tailwind Css", "Typescript", "Postgres", "Prisma"],
+    live: "https://mini-ecoommerce-full-mini-ecommerce.vercel.app",
+    github: "https://github.com/aryanraj07/Yt-Video-Sync-Watcher",
+    // tech: [
+    //   "/icons/next.png",
+    //   "/icons/node.png",
+    //   "/icons/postgre.png",
+    //   "/icons/typescript.png",
+    // ],
+  },
 
   // {
   //   id: 2,
