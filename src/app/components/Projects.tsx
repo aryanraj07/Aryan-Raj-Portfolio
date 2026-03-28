@@ -9,28 +9,6 @@ import { useConfirmRedirect } from "@/utils/handleConfirmCall";
 const projects = [
   {
     id: 1,
-    title: "Youtube Sync",
-    description:
-      "Watch YouTube together with friends in real-time with chat sync.",
-    img: "/projects/ytproject.png",
-    tags: ["React", "Javascript", "Node Js"],
-    live: "https://playnwatch.vercel.app/",
-    github: "https://github.com/aryanraj07/Yt-Video-Sync-Watcher",
-    // tech: ["/icons/react.png", "/icons/next.png", "/icons/node.png"],
-  },
-  {
-    id: 2,
-    title: "Whitehat Realty",
-    description:
-      "Explore detailed insights, market trends, and unbiased evaluations of commercial properties. ",
-    img: "/projects/Whitehat-project.png",
-    tags: ["Next Js", "Bootstrap"],
-    live: "https://whitehat.realty",
-    // github: "https://github.com/aryanraj07/Yt-Video-Sync-Watcher",
-    // tech: ["/icons/react.png", "/icons/next.png", "/icons/node.png"],
-  },
-  {
-    id: 3,
     title: "Full Stack Ecommerce App",
     description:
       "A full-stack eCommerce platform using Next.js + Node.js + TypeScript",
@@ -44,6 +22,29 @@ const projects = [
     //   "/icons/postgre.png",
     //   "/icons/typescript.png",
     // ],
+  },
+  {
+    id: 2,
+    title: "Whitehat Realty",
+    description:
+      "Explore detailed insights, market trends, and unbiased evaluations of commercial properties. ",
+    img: "/projects/Whitehat-project.png",
+    tags: ["Next Js", "Bootstrap"],
+    live: "https://whitehat.realty",
+    // github: "https://github.com/aryanraj07/Yt-Video-Sync-Watcher",
+    // tech: ["/icons/react.png", "/icons/next.png", "/icons/node.png"],
+  },
+
+  {
+    id: 3,
+    title: "Youtube Sync",
+    description:
+      "Watch YouTube together with friends in real-time with chat sync.",
+    img: "/projects/ytproject.png",
+    tags: ["React", "Javascript", "Node Js"],
+    live: "https://playnwatch.vercel.app/",
+    github: "https://github.com/aryanraj07/Yt-Video-Sync-Watcher",
+    // tech: ["/icons/react.png", "/icons/next.png", "/icons/node.png"],
   },
 
   // {
