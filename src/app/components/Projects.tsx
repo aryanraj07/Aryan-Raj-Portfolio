@@ -14,7 +14,7 @@ const projects = [
       "A full-stack eCommerce platform using Next.js + Node.js + TypeScript",
     img: "/projects/ecoomerece-banner.png",
     tags: ["Next Js 16", "Tailwind Css", "Typescript", "Postgres", "Prisma"],
-    live: "https://mini-ecoommerce-full-mini-ecommerce.vercel.app",
+    live: "https://mini-ecommerce-full-mini-ecommerce.vercel.app/",
     github: "https://github.com/aryanraj07/Yt-Video-Sync-Watcher",
     // tech: [
     //   "/icons/next.png",
