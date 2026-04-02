@@ -87,7 +87,7 @@ const Contact = () => {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => setUser({ ...user, [e.target.name]: e.target.value });
   console.log(submitStatus);
 

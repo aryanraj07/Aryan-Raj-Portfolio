@@ -93,7 +93,9 @@ const Header = () => {
 
             {/* Theme Toggler in Mobile Menu */}
 
-            <Button size="sm">Contact</Button>
+            <Link href="#contact">
+              <Button size="sm">Contact</Button>
+            </Link>
           </div>
         </div>
       )}
