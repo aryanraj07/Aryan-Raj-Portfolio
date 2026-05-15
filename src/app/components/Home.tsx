@@ -9,7 +9,7 @@ const Home = () => {
 
   const handleSmoothScroll = (
     e: React.MouseEvent<HTMLAnchorElement>,
-    link: string
+    link: string,
   ) => {
     e.preventDefault();
     document.querySelector(link)?.scrollIntoView({ behavior: "smooth" });

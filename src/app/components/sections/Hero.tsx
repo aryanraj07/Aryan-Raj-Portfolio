@@ -1,10 +1,8 @@
 import { socialLinks, words } from "@/constants";
 import Image from "next/image";
-import React from "react";
 import Button from "../Button";
-import { ArrowRight, Download, Icon, MoveRight } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import "@/styles/section/Hero.css";
-import Link from "next/link";
 import { AnimatedBorderButton } from "../AnimatedBorderButton";
 import { useRouter } from "next/navigation";
 import { useConfirmRedirect } from "@/utils/handleConfirmCall";
