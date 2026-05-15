@@ -37,7 +37,7 @@ const Hero = () => {
             <div className="animate-fade-in ">
               <span className="inline-flex gap-2 items-center glass rounded-full px-4 py-2">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Enginerr
+                Software Engineer
               </span>
             </div>
             <div className="flex flex-col gap-7">

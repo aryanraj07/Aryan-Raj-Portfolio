@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import Hero from "./components/sections/Hero";
 import Footer from "./layout/Footer";
 import AppThemeProvider from "./providers/theme-provider";
+import { Todo } from "./components/Todo";
 
 function App() {
   const [themeMode, setThemeMode] = useState("light");
