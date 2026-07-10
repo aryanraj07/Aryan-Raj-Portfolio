@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Menu, X, Moon, Sun, Laptop } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import "@/styles/Header.css";
 import { useTheme } from "next-themes";
-import Button from "../components/Button";
+import Button from "../../components/Button";
 import Link from "next/link";
 import { navLinks } from "@/constants";
 const Header = () => {
@@ -67,7 +67,9 @@ const Header = () => {
             </button>
           )} */}
           <div className="hidden md:block">
-            <Button size="sm">Contact</Button>
+            <Link href="#contact">
+              <Button size="sm">Contact</Button>
+            </Link>
           </div>
 
           <button className="md:hidden" onClick={() => setOpen(!open)}>

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import AppThemeProvider from "./providers/theme-provider";
 import { RedirectContextProvider } from "@/context/confirmContext";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,10 +38,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` bg-background text-foreground ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={` bg-background text-foreground ${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         <AppThemeProvider>
-          <RedirectContextProvider>{children}</RedirectContextProvider>
+          <RedirectContextProvider>
+            {children}
+            <Toaster />
+          </RedirectContextProvider>
         </AppThemeProvider>
       </body>
     </html>

@@ -23,6 +23,7 @@ const Footer = () => {
               <Link
                 className="text-sm text-gray-600 hover:text-white-50 transition-colors"
                 href={link.href}
+                key={link.id}
               >
                 {link.label}
               </Link>

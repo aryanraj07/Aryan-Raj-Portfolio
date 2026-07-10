@@ -93,9 +93,7 @@ const Contact = () => {
 
   return (
     <section
-      id="
-      
-      "
+      id="contact"
       className="py-20  transition duration-300 overflow-hidden"
     >
       <div className="absolute top-0 left-0 w-ful h-full">

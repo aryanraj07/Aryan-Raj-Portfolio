@@ -1,5 +1,5 @@
 "use client";
-import ConfirmModal from "@/app/components/common/ConfirmModla";
+import ConfirmModal from "@/components/common/ConfirmModla";
 import { createContext, useContext, useRef, useState } from "react";
 type ConfirmResult = boolean;
 interface PropsType {

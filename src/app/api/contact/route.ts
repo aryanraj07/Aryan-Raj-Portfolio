@@ -85,14 +85,14 @@ export async function POST(req: Request) {
     await Promise.all([sendAdminManil(), sendUserConfirmationMail()]);
     return Response.json(
       { success: true, message: "Email sent successfully" },
-      { status: 200 }
+      { status: 200 },
     );
   } catch (err) {
     console.error("Email error:", err);
 
     return Response.json(
       { success: false, message: "Failed to send email" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

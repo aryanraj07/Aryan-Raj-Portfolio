@@ -1,3 +1,4 @@
+"use client";
 import { socialLinks, words } from "@/constants";
 import Image from "next/image";
 import Button from "../Button";
@@ -83,7 +84,7 @@ const Hero = () => {
                     <ArrowRight size={20} />
                   </span>
                 </Button>
-                <AnimatedBorderButton href="https://drive.google.com/file/d/1eVVEIrDdmHOye2sYFEM0N77FSKfqezp1/view?usp=sharing">
+                <AnimatedBorderButton href="https://drive.google.com/file/d/1CeT7hahwztYB5o7Rp-jcOlH1uNtt1jUc/view?usp=sharing">
                   <Download className="w-5 h-5" />
                   Download CV
                 </AnimatedBorderButton>
