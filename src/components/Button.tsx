@@ -20,6 +20,7 @@ const Button = ({
     default: "px-6 py-3 text-base",
     lg: "px-8 py-4 text-lg",
   };
+  //
   const variantClasses = {
     primary: "bg-primary text-white hover:bg-primary/90 shadow-orange-glow",
     danger: "bg-red-500 text-white hover:bg-red-600",
