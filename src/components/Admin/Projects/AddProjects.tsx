@@ -56,7 +56,7 @@ export interface ProjectData {
   updatedAt: Date;
 }
 interface CreateProjectFormInputProps {
-  projectData: ProjectData;
+  projectData?: ProjectData | null;
 }
 export type CreateProjectFormInput = z.infer<typeof createProjectFormSchema>;
 const AddProjects = ({ projectData }: CreateProjectFormInputProps) => {

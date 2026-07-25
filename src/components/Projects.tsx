@@ -7,38 +7,38 @@ import Link from "next/link";
 import { useConfirmRedirect } from "@/utils/handleConfirmCall";
 import { Project } from "app_prisma/generated/prisma/browser";
 
-// const projects = [
-//   {
-//     id: 1,
-//     title: "Full Stack Ecommerce App",
-//     description:
-//       "A full-stack eCommerce platform using Next.js + Node.js + TypeScript",
-//     img: "/projects/ecoomerece-banner.png",
-//     tags: ["Next Js 16", "Tailwind Css", "Typescript", "Postgres", "Prisma"],
-//     live: "https://mini-ecommerce-full-mini-ecommerce.vercel.app/",
-//     github: "https://github.com/aryanraj07/Yt-Video-Sync-Watcher",
-//   },
-//   {
-//     id: 2,
-//     title: "Whitehat Realty",
-//     description:
-//       "Explore detailed insights, market trends, and unbiased evaluations of commercial properties. ",
-//     img: "/projects/Whitehat-project.png",
-//     tags: ["Next Js", "Bootstrap"],
-//     live: "https://whitehat.realty",
-//   },
+const projects = [
+  {
+    id: 1,
+    title: "Full Stack Ecommerce App",
+    description:
+      "A full-stack eCommerce platform using Next.js + Node.js + TypeScript",
+    img: "/projects/ecoomerece-banner.png",
+    tags: ["Next Js 16", "Tailwind Css", "Typescript", "Postgres", "Prisma"],
+    live: "https://mini-ecommerce-full-mini-ecommerce.vercel.app/",
+    github: "https://github.com/aryanraj07/Yt-Video-Sync-Watcher",
+  },
+  {
+    id: 2,
+    title: "Whitehat Realty",
+    description:
+      "Explore detailed insights, market trends, and unbiased evaluations of commercial properties. ",
+    img: "/projects/Whitehat-project.png",
+    tags: ["Next Js", "Bootstrap"],
+    live: "https://whitehat.realty",
+  },
 
-//   {
-//     id: 3,
-//     title: "Youtube Sync",
-//     description:
-//       "Watch YouTube together with friends in real-time with chat sync.",
-//     img: "/projects/ytproject.png",
-//     tags: ["React", "Javascript", "Node Js"],
-//     live: "https://playnwatch.vercel.app/",
-//     github: "https://github.com/aryanraj07/Yt-Video-Sync-Watcher",
-//   },
-// ];
+  {
+    id: 3,
+    title: "Youtube Sync",
+    description:
+      "Watch YouTube together with friends in real-time with chat sync.",
+    img: "/projects/ytproject.png",
+    tags: ["React", "Javascript", "Node Js"],
+    live: "https://playnwatch.vercel.app/",
+    github: "https://github.com/aryanraj07/Yt-Video-Sync-Watcher",
+  },
+];
 
 const Projects = ({ projects }: { projects: Project[] }) => {
   const useConfirm = useConfirmRedirect();

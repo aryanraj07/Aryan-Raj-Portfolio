@@ -94,7 +94,6 @@ const Hero = () => {
               </div>
             </div>
           </header>
-
           {/* RIght section */}
           <div className="animate-fade-in animation-delay-300 ">
             <div className="relative max-w-md mx-auto">
