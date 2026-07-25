@@ -4,12 +4,14 @@ import React from "react";
 
 const page = async ({ params }: { params: { id: string } }) => {
   const { id } = await params;
-
-  const projectData = await prisma.project.findUnique({
-    where: {
-      id,
-    },
-  });
+  let projectData = null;
+  if (id) {
+    projectData = await prisma.project.findUnique({
+      where: {
+        id,
+      },
+    });
+  }
 
   return (
     <>
